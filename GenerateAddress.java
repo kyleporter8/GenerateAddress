@@ -1,28 +1,31 @@
 
 public class GenerateAddress {
 
-	
 	public static void main(String[] args) {
 		String city;
-		String addrNum;
+		int addrNum;
 		String dir;
 		String street;
 		String suffix;
 		
-		city = getCity();
-		addrNum = getAddrNum();
+		City randomCity = new City();
+		city = randomCity.getCode();
+		
+		AddressNumber randomNumber = new AddressNumber();
+		addrNum = randomNumber.getNumber();
+		
 		dir = getDir();
 		street = getStreet();
 		suffix = getSuffix();
 		
 		System.out.println(addrNum + " " + dir + " " + street + " " + suffix + " ," + city);
 		
-	}
+	} // main() method in GenerateAddress class
 	
 	/***
 	 * generate random city code
 	 * @return String of city code
-	 */
+	 
 	public static String getCity() {
 		String city;
 		String[] cities = {"HRQ", "TON", "BUC", "BUV", "GDY",
@@ -35,12 +38,12 @@ public class GenerateAddress {
 		int randNum = (int)((Math.random() * cities.length));
 		city = cities[randNum];	
 		return city;
-	}
-	
+	} // getCity() method in GenerateAddress class
+	*/
 	/**
 	 * gets address number 
 	 * @return string number of 1 - 5 digits
-	 */
+	 
 	public static String getAddrNum() {
 		int num, length, digit;
 		String number = "";
@@ -56,7 +59,8 @@ public class GenerateAddress {
 			number = number.substring(1);
 		}
 		return number;
-	}
+	} // getAddrNum() method in GenerateAddress class
+	*/
 	
 	/**
 	 * get street directional
@@ -67,7 +71,7 @@ public class GenerateAddress {
 		
 		String dir = dirArr[(int)((Math.random() * 4))];
 		return dir;
-	}
+	} // getDir() method in GenerateAddress class
 	
 	/**
 	 * get Street name
@@ -81,9 +85,10 @@ public class GenerateAddress {
 		street = streetArr[(int)((Math.random() * streetArr.length))];
 		
 		return street;
-		}
+		} // getStreet() in GenerateAddress class
+	
 	/**
-	 * get street stuffix
+	 * get street suffix
 	 * @return String suffix
 	 */
 	public static String getSuffix() {
@@ -94,8 +99,6 @@ public class GenerateAddress {
 		
 		suffix = suffixArr[(int)((Math.random() * suffixArr.length))];
 		return suffix;
-	}
+	} // getSuffix() method in GenerateAddress class
 	
-	
-
 }
