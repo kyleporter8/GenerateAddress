@@ -25,10 +25,10 @@ public class City {
 	 */
 	public City(String code) {
 		setCode(code);
-	}
+	} // City() constructor in City class
 	
 	/**
-	 * Void Constructor w/random code
+	 * Void default Constructor w/random code
 	 */
 	public City() {
 		String code;
@@ -42,6 +42,6 @@ public class City {
 		int randNum = (int)((Math.random() * codes.length));
 		code = codes[randNum];
 		setCode(code);
-	}
+	} // City() constructor in City class
 	
 }

@@ -2,23 +2,19 @@
 public class GenerateAddress {
 
 	public static void main(String[] args) {
-		String city;
-		int addrNum;
+		
 		String dir;
 		String street;
 		String suffix;
 		
 		City randomCity = new City();
-		city = randomCity.getCode();
-		
 		AddressNumber randomNumber = new AddressNumber();
-		addrNum = randomNumber.getNumber();
+		Direction randomDir = new Direction();
 		
-		dir = getDir();
 		street = getStreet();
 		suffix = getSuffix();
 		
-		System.out.println(addrNum + " " + dir + " " + street + " " + suffix + " ," + city);
+		System.out.println(randomNumber.getNumber() + " " + randomDir.getDir() + " " + street + " " + suffix + " ," + randomCity.getCode());
 		
 	} // main() method in GenerateAddress class
 	
@@ -65,13 +61,14 @@ public class GenerateAddress {
 	/**
 	 * get street directional
 	 * @return String direction dir
-	 */
+	 
 	public static String getDir() {
 		String[] dirArr = {"N", "S", "E", "W"};
 		
 		String dir = dirArr[(int)((Math.random() * 4))];
 		return dir;
 	} // getDir() method in GenerateAddress class
+	*/
 	
 	/**
 	 * get Street name

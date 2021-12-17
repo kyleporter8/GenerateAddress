@@ -25,10 +25,10 @@ public class AddressNumber {
 	 */
 	public AddressNumber(int number) {
 		setNumber(number);
-	}
+	} // AddressNumber() constructor in AddressNumber class
 	
 	/**
-	 * void Constructor w/random number
+	 * void default Constructor w/random number
 	 */
 	public AddressNumber() {
 		int num, length, digit;
@@ -47,5 +47,5 @@ public class AddressNumber {
 		num = Integer.parseInt(number);
 	
 		setNumber(num);
-	}
+	}// AddressNumber() constructor in AddressNumber class
 }
