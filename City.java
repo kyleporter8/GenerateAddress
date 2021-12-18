@@ -20,17 +20,10 @@ public class City {
 	} // getCode() method in City class
 	
 	/**
-	 * Constructor
-	 * @param String code
+	 * generate a random city Code and set it to object's code
+	 * @return String code 
 	 */
-	public City(String code) {
-		setCode(code);
-	} // City() constructor in City class
-	
-	/**
-	 * Void default Constructor w/random code
-	 */
-	public City() {
+	public void setRandomCode() {
 		String code;
 		String[] codes = {"HRQ", "TON", "BUC", "BUV", "GDY",
 						   "LFP", "AVO", "TOL", "GLN", "PEO",
@@ -42,6 +35,25 @@ public class City {
 		int randNum = (int)((Math.random() * codes.length));
 		code = codes[randNum];
 		setCode(code);
+	} // setRandomCode() method in City class
+	
+	/**
+	 * Constructor
+	 * @param String code
+	 */
+	public City(String code) {
+		
+		setCode(code);
+		
+	} // City() constructor in City class
+	
+	/**
+	 * Void default Constructor w/random code
+	 */
+	public City() {
+		
+		setRandomCode();
+		
 	} // void City() constructor in City class
 	
 } // City class

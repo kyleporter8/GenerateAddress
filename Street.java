@@ -20,6 +20,19 @@ public class Street {
 	} // getStreet() method in Street class
 	
 	/**
+	 * sets street to a random String from Array
+	 */
+	public void setRandomStreet() {
+		
+		String street;
+		String[] streetArr = {"3rd", "59th", "16th", "24th", "7th",
+							  "Minnezona", "Dorsey", "Clarendon", "Osborn", "Central"};
+		street = streetArr[(int)((Math.random() * streetArr.length))];
+		setStreet(street);
+		
+	}// setRandomStreet() method in Street class
+	
+	/**
 	 * Constructor w/param to set street
 	 * @param String street
 	 */
@@ -31,12 +44,9 @@ public class Street {
 	 * default void Constructor sets random street
 	 */
 	public Street() {
-		String street;
-		String[] streetArr = {"3rd", "59th", "16th", "24th", "7th",
-							  "Minnezona", "Dorsey", "Clarendon", "Osborn", "Central"};
 		
-		street = streetArr[(int)((Math.random() * streetArr.length))];
-		setStreet(street);
+		setRandomStreet();
+		
 	} // void Street() constructor in Street class 
 	
 } // Street class

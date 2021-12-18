@@ -20,6 +20,19 @@ public class Suffix {
 	} // getSuffix() method in Suffix class
 	
 	/**
+	 * set suffix to random string
+	 */
+	public void setRandomSuffix() {
+		String suffix;
+		String[] suffixArr = {"ST", "PL", "WY", "AV", "DR", "LN",
+							  "ML", "PS", "PA", "PW", "RR", "RD",
+							  "AC", "FY", "PT", "WW", "EX", "VS"};
+		
+		suffix = suffixArr[(int)((Math.random() * suffixArr.length))];
+		setSuffix(suffix);
+	} // setRandomSuffix() method in Suffix class
+	
+	/**
 	 * Constructor with param to set Suffix
 	 * @param suffix
 	 */
@@ -32,13 +45,9 @@ public class Suffix {
 	 * generates random suffix
 	 */
 	public Suffix() {
-		String suffix;
-		String[] suffixArr = {"ST", "PL", "WY", "AV", "DR", "LN",
-							  "ML", "PS", "PA", "PW", "RR", "RD",
-							  "AC", "FY", "PT", "WW", "EX", "VS"};
 		
-		suffix = suffixArr[(int)((Math.random() * suffixArr.length))];
-		setSuffix(suffix);
+		setRandomSuffix();
+		
 	} // default Suffix() constructor in Suffix class
 	
 } // Suffix class

@@ -20,6 +20,17 @@ public class Direction {
 	} // getDir() method in Direction class
 	
 	/**
+	 * set direction to random String
+	 */
+	public void setRandomDirection() {
+		
+		String[] dirArr = {"N", "S", "E", "W"};
+		String dir = dirArr[(int)((Math.random() * 4))];
+		setDir(dir);
+		
+	} // setRandomDirection() method in Direction class
+	
+	/**
 	 * constructor w/parm to set direction
 	 * @param dir
 	 */
@@ -31,9 +42,9 @@ public class Direction {
 	 * default void constructor sets random direction
 	 */
 	public Direction() {
-		String[] dirArr = {"N", "S", "E", "W"};
-		String dir = dirArr[(int)((Math.random() * 4))];
-		setDir(dir);
+		
+		setRandomDirection();
+		
 	} // void Direction() constructor in Direction class
 
 } // Direction class

@@ -1,13 +1,13 @@
 
 public class AddressNumber {
 	
-	private int number;
+	private String number;
 	
 	/**
 	 * sent address number
 	 * @param int number
 	 */
-	public void setNumber(int number) {
+	public void setNumber(String number) {
 		this.number = number;
 	} // setNumber() method in AddressNumber class
 	
@@ -15,23 +15,15 @@ public class AddressNumber {
 	 * get address number
 	 * @return int number
 	 */
-	public int getNumber() {
+	public String getNumber() {
 		return number;
 	} // getNumber() method in AddressNumber class
 	
 	/**
-	 * Constructor 
-	 * @param int number
+	 * sets address number to a random number
 	 */
-	public AddressNumber(int number) {
-		setNumber(number);
-	} // AddressNumber() constructor in AddressNumber class
-	
-	/**
-	 * void default Constructor w/random number
-	 */
-	public AddressNumber() {
-		int num, length, digit;
+	public void setRandomNumber(){
+		int length, digit;
 		String number = "";
 		
 		length = (int)((Math.random() * 5) + 1);
@@ -44,9 +36,27 @@ public class AddressNumber {
 		while(number.subSequence(0, 1).equals("0")) {
 			number = number.substring(1);
 		}
-		num = Integer.parseInt(number);
+		setNumber(number);
+		
+	} // setRandomNumber() method in AddressNumber class
 	
-		setNumber(num);
+	/**
+	 * Constructor 
+	 * @param int number
+	 */
+	public AddressNumber(String number) {
+		
+		setNumber(number);
+		
+	} // AddressNumber() constructor in AddressNumber class
+	
+	/**
+	 * void default Constructor w/random number
+	 */
+	public AddressNumber() {
+		
+		setRandomNumber();
+		
 	}// void AddressNumber() constructor in AddressNumber class
 	
 } // AddressNumber class
