@@ -42,6 +42,9 @@ public class Intersection extends Location {
 		suffixB = new Suffix();
 	} // Intersection() constructor w/o params in Intersection class
 	
+	/**
+	 * method Overrides toString() to return String of entire address
+	 */
 	public String toString() {
 		String intersection;
 		
@@ -54,6 +57,6 @@ public class Intersection extends Location {
 				       super.getCity();
 		
 		return(intersection);
-	}
+	} // toString() method in Intersection class
 	
 } // Intersection class
