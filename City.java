@@ -42,6 +42,6 @@ public class City {
 		int randNum = (int)((Math.random() * codes.length));
 		code = codes[randNum];
 		setCode(code);
-	} // City() constructor in City class
+	} // void City() constructor in City class
 	
-}
+} // City class

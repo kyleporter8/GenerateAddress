@@ -47,5 +47,6 @@ public class AddressNumber {
 		num = Integer.parseInt(number);
 	
 		setNumber(num);
-	}// AddressNumber() constructor in AddressNumber class
-}
+	}// void AddressNumber() constructor in AddressNumber class
+	
+} // AddressNumber class

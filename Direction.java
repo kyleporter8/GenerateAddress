@@ -34,5 +34,6 @@ public class Direction {
 		String[] dirArr = {"N", "S", "E", "W"};
 		String dir = dirArr[(int)((Math.random() * 4))];
 		setDir(dir);
-	} // Direction() constructor in Direction class
-}
+	} // void Direction() constructor in Direction class
+
+} // Direction class
