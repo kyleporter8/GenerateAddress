@@ -2,7 +2,6 @@
 public class Freeway {
 
 	private String freeway;
-	private String xRoad;
 	
 	/**
 	 * sets freeway name 
@@ -25,7 +24,7 @@ public class Freeway {
 	 */
 	public void setRandomFreeway() {
 		String freeway;
-		String[] freeways = {"A101", "A202", "A303", "A51", "I10", "I17", "US60"};
+		String[] freeways = {"A101", "A202", "A303", "A51", "I10", "I17", "US60", "A143"};
 		int randNum = (int)((Math.random() * freeways.length));
 		
 		freeway = freeways[randNum];

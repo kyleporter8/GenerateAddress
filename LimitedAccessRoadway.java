@@ -6,22 +6,6 @@ public class LimitedAccessRoadway extends Location {
 	DirectionOfTravel doT;
 	
 	/**
-	 * set xRoad value
-	 * @param String xRoad
-	 
-	public void setXRoad(String xRoad) {
-		street.setStreet(xRoad); 
-	} // setXRoad() method in LimitedAccessRoadway class
-	*/
-	/**
-	 * get xRoad value
-	 * @return String xRoad
-	 
-	public String getXRoad() {
-		return street.getStreet();
-	} // getXRoad() method in LimitedAccessRoadway Class
-	*/
-	/**
 	 * Sets a random cross rd based upon freeway in question
 	 * @param String fy
 	 */
@@ -33,14 +17,14 @@ public class LimitedAccessRoadway extends Location {
 		
 			case "A101":
 				String[] A101Arr = {"W MCDOWELL RD", "W THOMAS RD", "W INDIAN SCHOOL RD", "W BETHANY HOME RD", "W GLENDALE AV",
-						             "W NORTHERN AV", "W OLIVE AV", "W PEORIA AV", "W GRAND AV", "W THUNDERBIRD RD", "E THUNDERBIRD RD"};
+						             "W NORTHERN AV", "W OLIVE AV", "W PEORIA AV", "W GRAND AV", "W THUNDERBIRD RD", "E THUNDERBIRD RD", "W RAY RD"};
 				randNum = (int)((Math.random() * A101Arr.length));
 				xRd = A101Arr[randNum];
 				break;
 			
 			case "A202":
 				String A202Arr[] = {"N 24TH ST", "N 32ND ST", "N 40TH ST", "N 44TH ST", "E VAN BUREN ST",
-								  "SKY HARBOR", "PRIEST DR", "RURAL RD", "MCCLINTOCK", "PRICE RD"};
+								  "E SKY HARBOR BL", "N PRIEST DR", "N SCOTTSDALE RD", "N MCCLINTOCK DR", "S PRICE RD"};
 				randNum = (int)((Math.random() * A202Arr.length));
 				xRd = A202Arr[randNum];
 				break;
@@ -61,7 +45,7 @@ public class LimitedAccessRoadway extends Location {
 				
 			case "I10":
 				String I10Arr[] = {"S MILLER RD", "N ESTRELLA PW", "N AVONDALE BL", "N 59TH AV", "N 7TH ST",
-									"E UNIVERSITY DR", "S 40TH ST", "W BASELINE RD", "E GUADALUPE RD", "W RAY RD"};
+									"E SKY HARBOR BL", "E UNIVERSITY DR", "S 40TH ST", "W BASELINE RD", "E GUADALUPE RD", "W RAY RD"};
 				randNum = (int)((Math.random() * I10Arr.length));
 				xRd = I10Arr[randNum];
 				break;
@@ -79,6 +63,11 @@ public class LimitedAccessRoadway extends Location {
 				xRd = US60Arr[randNum];
 				break;
 				
+			case "A143":
+				String A143Arr[] = {"E VAN BUREN ST", "E WASHINGTON ST", "E SKY HARBOR BL", "E UNIVERSITY DR"};
+				randNum = (int)((Math.random() * A143Arr.length));
+				xRd = A143Arr[randNum];
+				break;
 				
 			default:
 				Street xStreet = new Street();
@@ -112,7 +101,7 @@ public class LimitedAccessRoadway extends Location {
 		super();
 		freeway = new Freeway();
 		street = new Street(setRandomXRoad(freeway.getFreeway()));
-		doT = new DirectionOfTravel();
+		doT = new DirectionOfTravel(street.getStreet());
 	} // void LimitedAccessRoadway() constructor in LimitedAccessRoadway class
 	
 	/**

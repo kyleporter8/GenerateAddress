@@ -39,12 +39,22 @@ public class DirectionOfTravel {
 	/**
 	 * set a random direction of travel
 	 */
-	public void setRandomDoT() {
-		String doT;
-		String[] doTArr = { "NB", "SB", "EB", "WB"};
+	public void setRandomDoT(String street) {
+		int randNum; 
+		String doT, dir;
+		String[] doTArrNS = {"EB", "WB"};
+		String[] doTArrEW = {"NB", "SB"};
 		
-		int randNum = (int)((Math.random() * doTArr.length));
-		doT = doTArr[randNum];
+		dir = street.substring(0, 1);
+		
+		randNum = (int)((Math.random() * 2));
+		
+		if(dir.equals("N") || dir.equals("S")) {
+			doT = doTArrNS[randNum];
+		}
+		else {//if(dir.equals("E") || dir.equals("W")) {
+			doT = doTArrEW[randNum];
+		}
 		setDoT(doT);
 	} // setRandomDoT() method in Direction of Travel class
 	
@@ -73,8 +83,8 @@ public class DirectionOfTravel {
 	/**
 	 * void constructor sets random direction of travel & position
 	 */
-	public DirectionOfTravel() {
-		setRandomDoT();
+	public DirectionOfTravel(String street) {
+		setRandomDoT(street);
 		setRandomPos();
 	} // DirectionOfTravel() constructor in DirectionOfTravel class
 	
