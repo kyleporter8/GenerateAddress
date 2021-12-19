@@ -25,6 +25,29 @@ public class Intersection extends Location {
 		super();
 		streetA = new Street(); 
 		streetB = new Street();
+		
+		boolean run = true;
+		
+		String dirA = streetA.getStreet().substring(0, 1);
+		
+		while(run) {
+
+			String dirB = streetB.getStreet().substring(0, 1);
+			
+			if( (dirA.equals("N") || dirA.equals("S")) && 
+			   (dirB.equals("E") || dirB.equals("W")) ){
+					run = false;
+			}
+			
+			else if( (dirA.equals("E") || dirA.equals("W")) && 
+					(dirB.equals("N") || dirB.equals("S")) ) {
+					run = false;
+			}
+			else {
+				streetB = new Street();
+			}
+		} // end of while loop
+		
 	} // Intersection() constructor w/o params in Intersection class
 	
 	/**
