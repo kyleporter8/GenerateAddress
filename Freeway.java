@@ -2,6 +2,7 @@
 public class Freeway {
 
 	private String freeway;
+	private String xRoad;
 	
 	/**
 	 * sets freeway name 
@@ -24,9 +25,7 @@ public class Freeway {
 	 */
 	public void setRandomFreeway() {
 		String freeway;
-		String[] freeways = {"A101", "A202", "A238", "A347", "A51",
-							 "A85", "A87", "I10", "I8", "I17", "SUNVALLEY PW",
-							 "US60", "GRANDE AV"};
+		String[] freeways = {"A101", "A202", "A303", "A51", "I10", "I17", "US60"};
 		int randNum = (int)((Math.random() * freeways.length));
 		
 		freeway = freeways[randNum];
@@ -34,15 +33,16 @@ public class Freeway {
 	} // setRandomFreeway() method in Freeway class
 	
 	/**
-	 * Constructor sets freeway name
+	 * Constructor sets freeway name and cross road
 	 * @param String freeway
+	 * @param String xRoad
 	 */
 	public Freeway(String freeway) {
 		setFreeway(freeway);
 	} // Freeway() constructor in Freeway class
 	
 	/**
-	 * void Constructor sets random freeway name
+	 * void Constructor sets random freeway name and cross road
 	 */
 	public Freeway() {
 		setRandomFreeway();
