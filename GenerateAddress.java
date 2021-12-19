@@ -9,9 +9,9 @@ public class GenerateAddress {
 		Intersection INDIAN_SCHOOL;
 		LimitedAccessRoadway THUNDERBIRD;
 		
-		AHQ2 = new Address("2425", "W","LOWER BUCKEYE", "RD", "PHX");
-		INDIAN_SCHOOL = new Intersection("N", "27TH", "AV", "W", "INDIAN SCHOOL", "RD", "PHX");
-		THUNDERBIRD = new LimitedAccessRoadway("I17", "W", "THUNDERBIRD", "RD", "NB", "OF", "PHX");
+		AHQ2 = new Address("2425", "W LOWER BUCKEYE RD", "PHX");
+		INDIAN_SCHOOL = new Intersection("N 27TH AV", "W INDIAN SCHOOL RD", "PHX");
+		THUNDERBIRD = new LimitedAccessRoadway("I17", "W THUNDERBIRD RD", "NB", "OF", "PHX");
 		
 		System.out.println("Test Address >>>");		
 		System.out.println(AHQ2);

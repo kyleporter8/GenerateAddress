@@ -25,8 +25,10 @@ public class Street {
 	public void setRandomStreet() {
 		
 		String street;
-		String[] streetArr = {"3RD", "59TH", "16TH", "24TH", "7TH",
-							  "MINNEZONA", "DORSEY", "CLARENDON", "OSBORN", "CENTRAL"};
+		String[] streetArr = {"N 3RD AV", "N 59TH AV", "N 16TH ST", "N 24TH ", "N 7TH ST",
+							  "S 7TH AV", "S 67TH AV", "S 21ST PL", "S 16TH ST", "S 44TH ST",
+							  "W MINNEZONA AV", "S DORSEY LN", "W CLARENDON AV", "E OSBORN RD", "N CENTRAL AV",
+							  "N NORTHVALLEY PW", "W CIVIC CENTER DR", "W THUNDERBIRD RD", "S POWER RD", "E UNIVERSITY DR"};
 		street = streetArr[(int)((Math.random() * streetArr.length))];
 		setStreet(street);
 		

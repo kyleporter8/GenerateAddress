@@ -3,9 +3,7 @@ public class Address extends Location {
 
 
 	private String number;
-	Direction direction;
 	Street street;
-	Suffix suffix;
 	
 	/**
 	 * sent address number
@@ -50,9 +48,7 @@ public class Address extends Location {
 		String address;
 		
 		address = getNumber() + " " + 
-				   direction.getDir() + " " + 
-		           street.getStreet() + " " + 
-				   suffix.getSuffix() + " ," +
+		           street.getStreet() + " ," + 
 		           super.getCity();
 		
 		return address;
@@ -64,25 +60,18 @@ public class Address extends Location {
 	public Address() {
 		super();
 		setRandomNumber();
-		direction = new Direction();
 		street = new Street();
-		suffix = new Suffix();
 	} // void constructor in Address class
 	
 	/**
 	 * Constructor w/attribute params
-	 * @param num address number
-	 * @param dir address direction
 	 * @param str address street
-	 * @param sfx address suffix
 	 * @param cty address city
 	 */
-	public Address(String num, String dir, String str, String sfx, String cty) {
+	public Address(String num, String str, String cty) {
 		super(cty);
 		setNumber(num);
-		direction = new Direction(dir);
 		street = new Street(str);
-		suffix = new Suffix(sfx);
 	} // Address() constructor in Address class
 	
 } // Address class
