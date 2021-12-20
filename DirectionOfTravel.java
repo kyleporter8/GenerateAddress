@@ -52,7 +52,7 @@ public class DirectionOfTravel {
 		if(dir.equals("N") || dir.equals("S")) {
 			doT = doTArrNS[randNum];
 		}
-		else {//if(dir.equals("E") || dir.equals("W")) {
+		else {
 			doT = doTArrEW[randNum];
 		}
 		setDoT(doT);
@@ -61,12 +61,36 @@ public class DirectionOfTravel {
 	/**
 	 * set position attribute to random value
 	 */
-	public void setRandomPos() {
+	public void setRandomPos(String dir) {
+		int randNumA, randNumB;
 		String pos;
-		String[] posArr = {"NO", "SO", "EO", "WO", "UP", "OP", "ON", "OF"};
+		String[] posArrEW = {"EO", "WO"};
+		String[] posArrNS = {"NO", "SO"};
+		String[] posArrAT = {"UP", "OP"};
+		String[] posArrRP = {"ON", "OF"};
 		
-		int randNum = (int)((Math.random() * posArr.length));
-		pos = posArr[randNum];
+		randNumA = (int)((Math.random() * 6));
+		randNumB = (int)((Math.random() * 2));
+		
+		if(randNumA == 0 || randNumA == 1 || randNumA == 2)  {
+			dir = dir.substring(0, 1);
+			if(dir.equals("N") || dir.equals("S")) {
+				pos = posArrNS[randNumB];
+			}
+			else{
+				pos = posArrEW[randNumB];
+			}
+		}
+		else if(randNumA == 3 || randNumA == 4) {
+			pos = posArrAT[randNumB];
+		}
+		else if(randNumA == 5) {
+			pos = posArrRP[randNumB];
+		}
+		else {
+			pos = "XX";
+		} // end of if/else loop
+
 		setPosition(pos);
 	} // setRandomPos() method in DirectionOfTravel class
 	
@@ -85,7 +109,7 @@ public class DirectionOfTravel {
 	 */
 	public DirectionOfTravel(String street) {
 		setRandomDoT(street);
-		setRandomPos();
+		setRandomPos(getDoT());
 	} // DirectionOfTravel() constructor in DirectionOfTravel class
 	
 }// DirectionOfTravel class
