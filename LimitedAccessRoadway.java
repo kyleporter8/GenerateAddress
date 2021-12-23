@@ -92,6 +92,7 @@ public class LimitedAccessRoadway extends Location {
 		freeway = new Freeway(fy);
 		street = new Street(str);
 		doT = new DirectionOfTravel(dt, pos);
+		
 	} // LimitedAccessRoadway() constructor in LimitedAccessRoadway class
 	
 	/**
@@ -102,6 +103,11 @@ public class LimitedAccessRoadway extends Location {
 		freeway = new Freeway();
 		street = new Street(setRandomXRoad(freeway.getFreeway()));
 		doT = new DirectionOfTravel(street.getStreet());
+		
+		if(freeway.getFreeway().equals("A51")) {
+			super.setCity("PHX");
+		}
+		
 	} // void LimitedAccessRoadway() constructor in LimitedAccessRoadway class
 	
 	/**
